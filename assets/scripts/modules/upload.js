@@ -7,7 +7,7 @@ var GetGifUploaded; var i=0;
 
 //Constants
 const KeyToUp = 'rFDuK1U4JkZH6YMnkFq0JFVc1184B4H4';
-const UrlUpload = "http://upload.giphy.com/v1/gifs"
+const UrlUpload = "https://upload.giphy.com/v1/gifs"
 const UrlParameters = '?api_key=' + KeyToUp + '&file=';
 const btnCreateGif = document.querySelector('.create-guifos-up');
 const divBtnsLogoUp = document.getElementById('btnsLogo');
@@ -201,7 +201,7 @@ async function showGifUpload(IdGifUploaded) {
 }
 
 function CallGifUploaded(IdGif) {
-    const UrlGetById = "http://api.giphy.com/v1/gifs/" + IdGif + '?api_key=' + KeyToUp;    
+    const UrlGetById = "https://api.giphy.com/v1/gifs/" + IdGif + '?api_key=' + KeyToUp;    
 
     fetch(UrlGetById)
     .then(response => response.json())

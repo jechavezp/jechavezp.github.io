@@ -1,6 +1,6 @@
 const key = 'rFDuK1U4JkZH6YMnkFq0JFVc1184B4H4';
 /*Today we suggested you: API*/
-const TodaySuggestApi = 'http://api.giphy.com/v1/gifs/trending';
+const TodaySuggestApi = 'https://api.giphy.com/v1/gifs/trending';
 const UrlPlusKey = '?api_key=' + key + '&limit=14';
 
 function TodaySuggestSection(title, img, i) {        
