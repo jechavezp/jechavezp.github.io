@@ -1,0 +1,479 @@
+.header-up {
+    .back-to {
+        width: 29px;
+        height: 29px;
+        background-image: url('../images/arrow.svg');
+        background-repeat: no-repeat;            
+        cursor: pointer;
+        //display: block;
+        text-indent:-9999px;
+        position: relative;
+        left: -37px;
+        top: -23px;
+    }
+    .display-upload {
+        display: none;
+    }
+}
+
+.main-up {
+    .main-mis-guifos {
+        .create-gifos {
+            background: #E6E6E6;
+            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+            height: 386px;
+            width: 648px;
+            margin: 65px 0px 163px 0px;
+            .create-gifos-title {                
+                background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                box-sizing: border-box;
+                height: 24px;
+                padding: 3px;
+                width: 643px;
+                margin: 2px 0px 0px 2px;                
+                h3 {
+                    font-family: $FontChReg;
+                    font-size: 14px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                }
+            }
+            .create-gifos-body {
+                margin-left: 65px;                
+                img {
+                    height: 32px;
+                    width: 32px;
+                    position: relative;
+                    left: -46px;
+                    top: 41px;
+                }
+                h4 {
+                    width: 280px;
+                    height: 22px;
+                    font-family: $FontChReg;
+                    font-size: 16px;
+                    color: #110038;
+                    letter-spacing: 0;
+                    line-height: 22px;
+                }                
+                .paragraph {
+                    margin-top: 18px;
+                    width: 518px;
+                    height: 190px;
+                    p {
+                        font-family: $FontChReg;
+                        font-size: 14px;
+                        color: #110038;
+                        letter-spacing: 0;
+                        line-height: 20px;
+                    }
+                    .first {
+                        margin-bottom: 11px;
+                    }
+                    .second {
+                        line-height: 214%;
+                    }
+                }
+                .btn-create-gif {
+                    text-align: right;
+                    margin: 22px 31px 0px 0px;
+                    .btn-cancel {
+                        background: #FFF4FD;
+                        border: 1px solid #110038;
+                        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                        font-family: $FontChReg;
+                        font-size: 16px;
+                        color: #110038;
+                        letter-spacing: 0;
+                        text-align: center;
+                        line-height: 18px;
+                        margin-right: 11px;
+                        height: 36px;
+                        width: 144px;
+                        cursor: pointer;
+                    }
+                    .btn-start {
+                        background: #F7C9F3;
+                        border: 1px solid #110038;
+                        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                        font-family: $FontChReg;
+                        font-size: 16px;
+                        color: #110038;
+                        letter-spacing: 0;
+                        text-align: center;
+                        line-height: 18px; 
+                        height: 36px;
+                        width: 144px;
+                        cursor: pointer;
+                    }
+                }
+            }            
+        }
+    }
+    .main-preview-guifos {        
+        .display-tmp {
+            display: none;            
+        }
+        .preview-gifos {            
+            background: #E6E6E6;
+            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+            height: 548px;
+            width: 860px;
+            margin: 65px 0px 163px 0px;
+            .preview-gifos-title {
+                background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                box-sizing: border-box;
+                height: 24px;
+                padding: 3px;
+                width: 855px;
+                margin: 2px 0px 0px 2px;
+                h3 {
+                    font-family: $FontChReg;
+                    font-size: 14px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                }
+            }
+            .preview-gifos-body {                
+                .preview-video-up {
+                    background: #FFF;
+                    border: 1px solid #979797;
+                    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+                }
+                .preview-video {
+                    height: 434px;
+                    width: 832px;
+                    margin-top: 10px;
+                    margin-left: 13px;
+                    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                    .preview-blob {
+                        margin-left: 4px;
+                        margin-top: 4px;
+                        height: 425px;
+                        width: 824px;
+                    }
+                    .preview-start-capture {
+                        margin-left: 4px;
+                        margin-top: 4px;
+                        height: 425px;
+                        width: 824px;
+                    }
+                    .upload-icon {
+                        padding-top: 15%;
+                        text-align: center;
+                        h3 {
+                            font-family: $FontChReg;
+                            font-size: 16px;
+                            color: #110038;
+                            letter-spacing: 0;
+                            text-align: center;
+                            line-height: 22px;
+                        }
+                    }
+                    .upload-content {
+                        text-align: center;
+                        .upload-bar-progress {
+                            background-color:#999999;
+                            height: 24px;
+                            width: 324px;
+                            margin: 35px 0px 0px 255px;
+                        }
+                        .upload-bar {
+                            background-color: #F7C9F3;
+                            height: 24px;                            
+                            width: 1%;
+                        }
+                        h3 {
+                            font-family: ChakraPetch-Regular;
+                            font-size: 12px;
+                            color: rgba(17,0,56,0.64);
+                            letter-spacing: 0;
+                            text-align: center;
+                            line-height: 14px;
+                            margin-top: 10px;
+                        }
+                    }                    
+                }
+                .btn-capture-gif {
+                    text-align: right;
+                    margin: 20px 17px 0px 0px;
+                    padding: 0px 0px 0px 13px;                                                            
+                    .timer-size {
+                        height: 34px;
+                        width: 124px;
+                        .timer-text{
+                            padding: 5px;
+                            box-sizing: border-box;
+                            text-align: center;
+                            font-family: $FontChReg;
+                            font-size: 16px;
+                            font-weight: normal;
+                            color: #110038;
+                            letter-spacing: 0;
+                            line-height: 22px;
+                        }
+                    }
+                    .timer-color {
+                        background: #FFFFFF;
+                        border: 1px solid #979797;
+                        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+                    }
+                    .progress-play-content {                        
+                        .progress-play{
+                            background-color:#999999;
+                            height: 24px;
+                            width: 240px;                            
+                            margin: 7px 0px 0px 15px;   
+                        }
+                        .bar {
+                            background-color: #F7C9F3;
+                            height: 24px;                            
+                            width: 1%;
+                        }
+                        .gif-play {
+                            background-image: url('../images/forward.svg');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-color: #F7C9F3;
+                            border: 1px solid #110038;
+                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                            height: 22px;
+                            width: 20px;
+                            margin: 8px -13px 0px 0px;
+                        }              
+                    }
+                    .btns-create-gif {
+                        margin-left: 12px;
+                        .gif-repeat {
+                            height: 36px;
+                            width: 144px;
+                            cursor: $CursorPointer;
+                            background: #FFF4FD;
+                            border: 1px solid #110038;
+                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                            font-family: $FontChReg;
+                            font-size: 16px;
+                            color: #110038;
+                            letter-spacing: 0;
+                            text-align: center;
+                            line-height: 18px;
+                            margin-right: 9px;
+                        }
+                        .gif-upload {
+                            height: 36px;
+                            width: 144px;
+                            cursor: $CursorPointer;
+                            background: #F7C9F3;
+                            border: 1px solid #110038;
+                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                            font-family: $FontChReg;
+                            font-size: 16px;
+                            color: #110038;
+                            letter-spacing: 0;
+                            text-align: center;
+                            line-height: 18px;
+    
+                        }
+                        .gif-cancel {
+                            height: 36px;
+                            width: 144px;
+                            cursor: $CursorPointer;
+                            background: #FFF4FD;
+                            border: 1px solid #110038;
+                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                            font-family: ChakraPetch-Regular;
+                            font-size: 16px;
+                            color: #110038;
+                            letter-spacing: 0;
+                            text-align: center;
+                            line-height: 18px;
+                        }
+                    }
+                    .btn-capture-icon {
+                        background-image: url('../images/camera.svg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-color: #F7C9F3;                        
+                        border: 1px solid #110038;
+                        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                        cursor: $CursorPointer;
+                        height: 36px;
+                        width: 36px;
+                        position: relative;
+                        top: -6px;
+                        left: 4px;
+                    }
+                    .btn-capture{
+                        margin-right: -4px;
+                        font-family: $FontChReg;
+                        font-size: 16px;
+                        color: #110038;
+                        letter-spacing: 0;
+                        text-align: center;
+                        line-height: 18px;
+                        background: #F7C9F3;
+                        border: 1px solid #110038;
+                        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                        height: 36px;
+                        width: 144px;
+                        cursor: $CursorPointer;
+                    }
+                    .btn-stop-icon {
+                        background-image: url('../images/recording.svg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-color: #FF6161;                        
+                        border: 1px solid #110038;
+                        box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+                        cursor: $CursorPointer;
+                        height: 36px;
+                        width: 36px;
+                        position: relative;
+                        top: -6px;
+                        left: 4px;
+                    }
+                    .btn-stop {
+                        margin-right: -4px;
+                        background: #FF6161;
+                        border: 1px solid #110038;
+                        box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+                        height: 36px;
+                        width: 144px;
+                        cursor: $CursorPointer;
+                        font-family: $FontChReg;
+                        font-size: 16px;
+                        color: #FFFFFF;
+                        letter-spacing: 0;
+                        text-align: center;
+                        line-height: 18px;
+                    }                                                            
+                }
+            }
+        }
+    }
+    .MyGuifos {
+        .main-view-myguifos {
+            .mis-guifos {        
+                height: 32px;
+                background: #FFFAFE;
+                border: 1px solid #E6BBE2;
+                box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+                padding: 8px;
+                box-sizing: border-box;
+                h3 {
+                    font-family: $FontChReg;
+                    font-size: 14px;
+                    font-weight: normal;
+                    color: #110038;
+                    letter-spacing: 0;
+                }
+            }
+            .mis-guifos-container {
+                margin-top: 15px;
+                justify-content: space-between;
+                .mis-guifos-body {
+                    height: 313px;
+                    width: 288px;                                
+                    padding: 3px 0px 0px 3px;
+                    margin-bottom: 15px;
+                    .my-guifos-gif {                    
+                        img {
+                            height: 313px;
+                            width: 288px;
+                        }                    
+                    }
+                    .my-guifos-title {
+                        display: none;
+                    }                    
+                }
+                .mis-guifos-body:hover {
+                    height: 313px;
+                    width: 288px;
+                    background: #E6E6E6;
+                    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                    padding: 3px 0px 0px 3px;
+                    margin-bottom: 15px;                    
+                    .my-guifos-title {
+                        display: block;                    
+                        height: 26px;
+                        width: 284px;
+                        position: relative;
+                        top: -3px;
+                        background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                        h3 {
+                            float: left;
+                            font-family: $FontChReg;
+                            font-size: 14px;
+                            color: #FFFFFF;
+                            letter-spacing: 0;
+                            padding: 3.9px;
+                            box-sizing: border-box;
+                        }                    
+                    }                
+                    .my-guifos-gif {                    
+                        img {
+                            height: 283px;
+                            width: 284px;
+                        }                    
+                    }                
+                }
+                .mis-guifos-body-night:hover {
+                    height: 313px;
+                    width: 288px;
+                    background: #E6E6E6;
+                    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                    padding: 3px 0px 0px 3px;
+                    margin-bottom: 15px;
+                    .my-guifos-title {
+                        background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+                        display: block;                    
+                        height: 26px;
+                        width: 284px;
+                        position: relative;
+                        top: -3px;
+                        h3 {
+                            float: left;
+                            font-family: $FontChReg;
+                            font-size: 14px;
+                            color: #FFFFFF;
+                            letter-spacing: 0;
+                            padding: 3.9px;
+                            box-sizing: border-box;
+                        }
+                    }
+                    .my-guifos-gif {                    
+                        img {
+                            height: 283px;
+                            width: 284px;
+                        }                    
+                    }
+                }
+                .mis-guifos-body-night {
+                    height: 313px;
+                    width: 288px;                                
+                    padding: 3px 0px 0px 3px;
+                    margin-bottom: 15px;
+                    .my-guifos-gif {                    
+                        img {
+                            height: 313px;
+                            width: 288px;
+                        }                    
+                    }
+                    .my-guifos-title {
+                        display: none;
+                    }                    
+                }                     
+            }
+            .unset-padding {
+                padding: 0;
+            }
+        }
+    }
+    
+    .margin-tmp {
+        margin-top: 28px;
+    }
+    .display-window {
+        display: none;
+    }
+}

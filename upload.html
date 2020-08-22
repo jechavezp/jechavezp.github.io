@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Gif</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+</head>
+<body id="body" class="day-theme">
+    <nav id="nav" class="nav-day">
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803
+    </nav>
+    <!-- /nav -->
+    <header>
+        <div class="grid-system header-up">
+            <div class="logo col-8">
+                <a href="index.html">gifos</a>
+                <a class="back-to display-upload" href="upload.html">back</a>
+            </div>            
+            <!-- /logo -->            
+            <div id="btnsLogo" class="btns-logo col-4">
+                <button class="create-guifos-up">Crear Guifos</button>
+                <button id="theme-button" class="choose-theme">Elegir tema</button>
+                <button id="theme-button2" class="select"></button>                                
+                <a href="upload.html">Mis Guifos</a>
+                <div class="themes display">
+                    <div id="btn-day" class="day">
+                        <h3>
+                            Sailor Day
+                        </h3>
+                    </div>
+                    <div id="btn-night" class="night">
+                        <h3>
+                            Sailor Night
+                        </h3>
+                    </div>
+                </div>
+            </div>                      
+            <!-- /btns-logo-->                       
+        </div>
+        <!-- /grid-system-->
+    </header>
+    <main class="main-up">
+        <div class="grid-system main-mis-guifos margin-tmp">
+            <div class="col-3"></div>
+            <div class="create-gifos col-6 display-window">
+                <div class="create-gifos-title">
+                    <h3>
+                        Crear Guifos
+                    </h3>
+                </div>
+                <div class="create-gifos-body">
+                    <img src="./assets/images/window_img.png" alt="window_img">
+                    <h4>
+                        Aquí podrás crear tus propios guifos
+                    </h4>                    
+                    <div class="paragraph">
+                        <p class="first">
+                            Crear tu <strong>guifo</strong> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tu guifo son:
+                        </p>                        
+                        <p class="second">    
+                            <strong>1)</strong> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)<br>                                                
+                            <strong>2)</strong> Capturar tu momento guifo<br>
+                            <strong>3)</strong> Revisar el momento<br>
+                            <strong>4)</strong> Listo para subir y compartir!<br>
+    
+                            ¿Quieres comenzar a crear tu <strong>guifo</strong> ahora? 
+                        </p>
+                    </div>
+                    <div class="btn-create-gif">
+                        <button class="btn-cancel" onclick="LoadDocument()">Cancelar</button>
+                        <button class="btn-start" onclick="start()">Comenzar</button>
+                    </div>                    
+                </div>
+            </div>            
+            <div class="col-3"></div>
+        </div>
+        <!-- /main-mis-guifos -->    
+        <div class="grid-system main-preview-guifos">
+            <div id="after" class="col-2"></div>            
+                            
+            <div class="col-2"></div>            
+        </div>
+        <!-- main-preview-guifos -->
+        <div class="grid-system main-uploaded-gifos hide">
+            <div class="col-3"></div>
+            <div class="uploaded-gifos col-7">
+                <div class="uploaded-gifos-title">
+                    <h3>
+                        Guifo Subido Con Éxito
+                    </h3>
+                </div>
+                <div class="grid-system unset-padding uploaded-gifos-body">
+                    <div class="uploaded-gifos-view col-4">
+                        <img id="UploadedGifosView" class="" src="" alt="uploaded_gif_view">
+                    </div>
+                    <div class="uploaded-gif-btns col-3">
+                        <h3>
+                            Guifo creado con éxito
+                        </h3>
+                        <button class="btn-copy-link" onclick="CopyLinkGif()">Copiar Enlace Guifo</button>
+                        <button class="btn-down-guifo" onclick="DownloadGif()">Descargar Guifo</button>                        
+                    </div>
+                    <div class="div-is-done col-11">
+                        <button class="btn-is-done" onclick="LoadDocument()">Listo</button>
+                    </div>
+                </div>
+            </div>                
+            <div class="col-2"></div>
+        </div>
+        <!-- uploaded-gifos -->        
+        <section class="MyGuifos">
+            <div class="main-view-myguifos grid-system">
+                <div class="mis-guifos col-12">
+                    <h3>
+                        Mis guifos
+                    </h3>
+                </div>
+                <!-- /today-trends -->
+                <div class="mis-guifos-container grid-system unset-padding col-12">
+                
+                </div>                                                                              
+            </div>
+            <!-- /main-trends -->
+        </section>
+        <!-- /MyGuifos-->                                    
+        
+    </main>    
+    <!-- /main -->
+    <script src="./assets/scripts/modules/upload.js"></script>
+    <script src="./assets/scripts/modules/themesup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js" type="text/javascript"></script>    
+</body>
+</html>

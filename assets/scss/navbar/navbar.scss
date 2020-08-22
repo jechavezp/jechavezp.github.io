@@ -1,0 +1,23 @@
+.nav-day {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    box-shadow: 0 1px 0 0 #110038;
+    font-family: $FontChReg;
+    font-size: 12px;
+    color: $white;
+    letter-spacing: 0;
+    height: 23px;
+    box-sizing: border-box;
+    padding: 3.9px;
+}
+
+.nav-night {
+    background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+    box-shadow: 0 1px 0 0 #110038;
+    font-family: $FontChReg;
+    font-size: 12px;
+    color: $white;
+    letter-spacing: 0;
+    height: 23px;
+    box-sizing: border-box;
+    padding: 3.9px;
+}

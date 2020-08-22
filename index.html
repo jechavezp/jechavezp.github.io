@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GifOS Project</title>
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="/assets/styles/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">         
+    </head>
+<body id="body" class="day-theme">
+    <nav id="nav" class="nav-day">
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803
+    </nav>
+    <!-- /nav -->
+    <header>
+        <div class="grid-system header-search">
+            <div class="logo col-8">
+                <!--<img src="/assets/images/gifOF_logo.png" alt="gifos_logo" onclick="Goto()">-->
+                <a href="index.html">gifos</a>                
+            </div>            
+            <!-- /logo -->            
+            <div id="btnsLogo" class="btns-logo col-4">
+                <button class="create-guifos" onclick="RedirectToUpload()">Crear Guifos</button>
+                <button id="theme-button" class="choose-theme">Elegir tema</button>
+                <button id="theme-button2" class="select"></button>                                
+                <a href="upload.html">Mis Guifos</a>
+                <div class="themes display">
+                    <div id="btn-day" class="day">
+                        <h3>
+                            Sailor Day
+                        </h3>
+                    </div>
+                    <div id="btn-night" class="night">
+                        <h3>
+                            Sailor Night
+                        </h3>
+                    </div>
+                </div>
+            </div>                      
+            <!-- /btns-logo-->
+            <div id="GifSearch" class="gifos-search col-12">
+                <div class="search-title">
+                    <h3>Buscar</h3>
+                </div>
+                <div class="search-body col-12 grid-system unset-padding">
+                    <div class="search-input col-11">
+                        <input type="text" placeholder="   Busca gifs, hashtags, temas, busca lo que quieras…" id="search-text">                    
+                    </div>
+                    <div class="search-button col-1">
+                        <button id="SearchButton">Buscar</button>
+                    </div>
+                </div>    
+            </div>
+            <!-- /gifos-search -->
+            <div id="GifSearchResult" class="gifos-search-result display col-12">
+                 <div class="suggested-result col-11">
+                    <h3 id="result1"></h3>
+                </div>
+                <div class="other-result col-11">
+                    <h3 id="result2"></h3>
+                </div>
+                <div class="other-result col-11">
+                    <h3 id="result3"></h3>
+                </div> 
+            </div>
+        </div>
+        <!-- /grid-system-->
+    </header>    
+    <!-- /header-->
+    <main>
+        <section id="IdSearch" class="search">
+            <div class="main-search grid-system display">
+                <div class="hash-tag-button col-4">
+                    <button class="Result-1">
+                        <h3 id="HashTagButton1"></h3> 
+                    </button>
+                    <button class="Result-2">
+                        <h3 id="HashTagButton2"></h3>
+                    </button>
+                    <button class="Result-3">
+                        <h3 id="HashTagButton3"></h3>
+                    </button>
+                </div>
+                <div class="search-result col-12">
+                    <h3>
+                        Resultado de búsqueda:
+                    </h3>
+                </div>
+                <!-- /search -->                
+                <div class="search-container grid-system unset-padding col-12">                    
+                    
+                </div>
+                <!-- /search-container -->                    
+            </div>
+            <!-- /main-search -->
+        </section>
+        <!-- /search-->        
+        <section class="suggested">
+            <div class="main-suggested grid-system">
+                <div id="TodaySuggested" class="today-suggested col-12">
+                    <h3>
+                        Hoy te sugerimos:
+                    </h3>
+                </div>
+                <!-- /today-suggested -->                
+                <div class="suggested-container grid-system unset-padding col-12">                    
+                  
+                </div>
+                <!-- /suggested-container -->                    
+            </div>
+            <!-- /main-suggested -->
+        </section>
+        <!-- /suggested-->
+        <section class="trends">
+            <div class="main-trends grid-system">
+                <div id="TodayTrends" class="today-trends col-12">
+                    <h3>
+                        Tendencias:
+                    </h3>
+                </div>
+                <!-- /today-trends -->
+                <div class="trends-container grid-system unset-padding col-12">                    
+                                                      
+                </div>
+            <!-- /main-trends -->
+        </section>
+        <!-- /trends-->
+    </main>
+    <!-- /main -->
+    <!--<script src="./assets/scripts/main.js" type="module"></script>-->
+    <script src="./assets/scripts/modules/search.js"></script>
+    <script src="./assets/scripts/modules/suggested.js"></script>        
+    <script src="./assets/scripts/modules/themes.js"></script>
+    <!--<script src="./assets/scripts/modules/upload.js"></script>-->
+</body>
+</html>
