@@ -764,49 +764,46 @@ main .search {
       height: 34px;
       background: #4180F6;
       border: 1px solid #4C2F99;
-      box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF; }
-      main .search .main-search .hash-tag-button .Result-1 h3 {
-        font-family: "ChakraPetch-Regular";
-        font-size: 14px;
-        color: #FFFFFF;
-        letter-spacing: 0;
-        line-height: 18px;
-        font-weight: normal;
-        text-align: left;
-        margin-left: 5px;
-        cursor: pointer; }
+      box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+      font-family: "ChakraPetch-Regular";
+      font-size: 14px;
+      color: #FFFFFF;
+      letter-spacing: 0;
+      line-height: 18px;
+      font-weight: normal;
+      text-align: left;
+      margin-left: 5px;
+      cursor: pointer; }
     main .search .main-search .hash-tag-button .Result-2 {
       width: 154px;
       height: 34px;
       background: #4180F6;
       border: 1px solid #4C2F99;
-      box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF; }
-      main .search .main-search .hash-tag-button .Result-2 h3 {
-        font-family: "ChakraPetch-Regular";
-        font-size: 14px;
-        color: #FFFFFF;
-        letter-spacing: 0;
-        line-height: 18px;
-        font-weight: normal;
-        text-align: left;
-        margin-left: 5px;
-        cursor: pointer; }
+      box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+      font-family: "ChakraPetch-Regular";
+      font-size: 14px;
+      color: #FFFFFF;
+      letter-spacing: 0;
+      line-height: 18px;
+      font-weight: normal;
+      text-align: left;
+      margin-left: 5px;
+      cursor: pointer; }
     main .search .main-search .hash-tag-button .Result-3 {
       width: 140px;
       height: 34px;
       background: #4180F6;
       border: 1px solid #4C2F99;
-      box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF; }
-      main .search .main-search .hash-tag-button .Result-3 h3 {
-        font-family: "ChakraPetch-Regular";
-        font-size: 14px;
-        color: #FFFFFF;
-        letter-spacing: 0;
-        line-height: 18px;
-        font-weight: normal;
-        text-align: left;
-        margin-left: 5px;
-        cursor: pointer; }
+      box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+      font-family: "ChakraPetch-Regular";
+      font-size: 14px;
+      color: #FFFFFF;
+      letter-spacing: 0;
+      line-height: 18px;
+      font-weight: normal;
+      text-align: left;
+      margin-left: 5px;
+      cursor: pointer; }
   main .search .main-search .search-result {
     height: 32px;
     background: #FFFAFE;

@@ -4,10 +4,6 @@ const ButtonSearch = document.getElementById('SearchButton');
 /*Search: API*/
 const SearchApi = 'https://api.giphy.com/v1/gifs/search';
 const UrlPlusKeySearch = '?api_key=' + keySearch;
-/*To do searchs by suggested results*/ 
-const result1 = document.getElementById('result1');
-const result2 = document.getElementById('result2');
-const result3 = document.getElementById('result3');
 /*To get titles and put it on buttons (Hash tags searchs)*/
 const HashTagButton1 = document.getElementById('HashTagButton1');
 const HashTagButton2 = document.getElementById('HashTagButton2');
@@ -24,18 +20,42 @@ function AuxFunction(idh3) {
 }
 
 function ResultOnChange(resutlSuggested, SimilarResult, OtherResult) {
+    const divContentSearch = document.createElement('div');
     const divSearch = document.getElementById('GifSearchResult');
     divSearch.classList.remove('display');
 
+    //To clean previous searchs results
+    divSearch.innerHTML = "";
+
+    const TemplateContentSearch = `
+    <div class="suggested-result col-11">
+        <h3 id="result1" onclick="Result1()"></h3>
+    </div>
+    <div class="other-result col-11">
+        <h3 id="result2" onclick="Result2()"></h3>
+    </div>
+    <div class="other-result col-11">
+        <h3 id="result3" onclick="Result3()"></h3>
+    </div>                                
+    `;
+
+    divContentSearch.innerHTML = TemplateContentSearch;
+    divSearch.appendChild(divContentSearch);
+
+    /*To do searchs by suggested results*/ 
+    const result1 = document.getElementById('result1');
+    const result2 = document.getElementById('result2');
+    const result3 = document.getElementById('result3');
+    
     result1.innerHTML = resutlSuggested;
     result2.innerHTML = SimilarResult;
     result3.innerHTML = OtherResult;
 }
 
 function PutItOnTags(HashTag1, HashTag2, HashTag3) {    
-    HashTagButton1.innerHTML = '#' + HashTag1;
-    HashTagButton2.innerHTML = '#' + HashTag2;
-    HashTagButton3.innerHTML = '#' + HashTag3;
+    HashTagButton1.value = ' #' + HashTag1;    
+    HashTagButton2.value = ' #' + HashTag2;
+    HashTagButton3.value = ' #' + HashTag3;
 }
 
 function SearchSection(title, img, Cssclass1, Cssclass2) {                
@@ -59,7 +79,7 @@ function SearchSection(title, img, Cssclass1, Cssclass2) {
 }
 
 function ClearSearch() {
-    const newSearch = document.querySelector('.search-container');
+    const newSearch = document.querySelector('.search-container');    
     newSearch.innerHTML = "";
 }
 
@@ -82,50 +102,51 @@ InputSearch.addEventListener( 'input', function() {
     }    
 })
 
-result1.addEventListener( 'click', function() {
-        /*To hide search title results*/
-        const divSearch = document.getElementById('GifSearchResult');
-        divSearch.classList.add('display')
+function Result1() {
+    /*To hide search title results*/
+    const divSearch = document.getElementById('GifSearchResult');
+    divSearch.classList.add('display')
 
-        let StringToSearch = result1.innerHTML;
-        let url = SearchApi + UrlPlusKeySearch + '&q=' + StringToSearch + '&limit=10';
-        SearchByResultCallApi(url)
-    })
+    let StringToSearch = result1.innerHTML;
+    let url = SearchApi + UrlPlusKeySearch + '&q=' + StringToSearch + '&limit=10';
+    SearchByResultCallApi(url)
+}
 
-result2.addEventListener( 'click', function() {
-        /*To hide search title results*/
-        const divSearch = document.getElementById('GifSearchResult');
-        divSearch.classList.add('display')
+function Result2() {
+    /*To hide search title results*/
+    const divSearch = document.getElementById('GifSearchResult');
+    divSearch.classList.add('display')
 
-        let StringToSearch = result2.innerHTML;
-        let url = SearchApi + UrlPlusKeySearch + '&q=' + StringToSearch + '&limit=10';
-        SearchByResultCallApi(url)
-})
+    let StringToSearch = result2.innerHTML;
+    let url = SearchApi + UrlPlusKeySearch + '&q=' + StringToSearch + '&limit=10';
+    SearchByResultCallApi(url)
+}
 
-result3.addEventListener( 'click', function() {
-        /*To hide search title results*/
-        const divSearch = document.getElementById('GifSearchResult');
-        divSearch.classList.add('display')
+function Result3() {
+    /*To hide search title results*/
+    const divSearch = document.getElementById('GifSearchResult');
+    divSearch.classList.add('display')
 
-        let StringToSearch = result3.innerHTML;
-        let url = SearchApi + UrlPlusKeySearch + '&q=' + StringToSearch + '&limit=10';
-        SearchByResultCallApi(url)
-})
+    let StringToSearch = result3.innerHTML;
+    let url = SearchApi + UrlPlusKeySearch + '&q=' + StringToSearch + '&limit=10';
+    SearchByResultCallApi(url)
+}
 
 HashTagButton1.addEventListener( 'click', function() {
-    let StringToSearch = HashTagButton1.innerHTML.substr(1);
+    let StringToSearch = HashTagButton1.value.substr(2);     
+    console.log(StringToSearch);   
     let url = SearchApi + UrlPlusKeySearch + '&q=' + StringToSearch + '&limit=10';
     SearchByResultCallApi(url)
 })
 
 HashTagButton2.addEventListener( 'click', function() {
-    let StringToSearch = HashTagButton2.innerHTML.substr(1);
+    let StringToSearch = HashTagButton2.value.substr(2);
     let url = SearchApi + UrlPlusKeySearch + '&q=' + StringToSearch + '&limit=10';
     SearchByResultCallApi(url)
 })
 
 HashTagButton3.addEventListener( 'click', function() {
-    let StringToSearch = HashTagButton3.innerHTML.substr(1);
+    let StringToSearch = HashTagButton3.value.substr(2);
     let url = SearchApi + UrlPlusKeySearch + '&q=' + StringToSearch + '&limit=10';
     SearchByResultCallApi(url)
 })
