@@ -243,6 +243,8 @@
                         }              
                     }
                     .btns-create-gif {
+                        display: flex;
+                        justify-content: flex-end;
                         margin-left: 12px;
                         .gif-repeat {
                             height: 36px;
@@ -298,10 +300,7 @@
                         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
                         cursor: $CursorPointer;
                         height: 36px;
-                        width: 36px;
-                        position: relative;
-                        top: -6px;
-                        left: 4px;
+                        width: 36px;                        
                     }
                     .btn-capture{
                         margin-right: -4px;
@@ -327,10 +326,7 @@
                         box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
                         cursor: $CursorPointer;
                         height: 36px;
-                        width: 36px;
-                        position: relative;
-                        top: -6px;
-                        left: 4px;
+                        width: 36px;                        
                     }
                     .btn-stop {
                         margin-right: -4px;

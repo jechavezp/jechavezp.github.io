@@ -92,8 +92,8 @@ function start() {
                         <button class="gif-repeat display-tmp" onclick="CaptureRepeat()">Repetir Captura</button> 
                         <button class="gif-upload display-tmp" onclick="UploadGif()">Subir Guifo</button>
                         <button class="gif-cancel display-tmp" onclick="UploadGifCancel()">Cancelar</button>
-                        <button class="btn-stop-icon display-tmp"></button>
-                        <button class="btn-stop display-tmp">Listo</button>
+                        <button class="btn-stop-icon display-tmp" onclick="BtnStopRecording()"></button>
+                        <button class="btn-stop display-tmp" onclick="BtnStopRecording()">Listo</button>
                         <button class="btn-capture-icon" onclick="captureBtns()"></button>
                         <button class="btn-capture" onclick="captureBtns()">Capturar</button>
                     </div>
@@ -119,9 +119,7 @@ function CaptureRepeat() {
     TimerText.innerHTML = "";
     DivBtnsCreateGif.classList.remove('col-5');
     DivBtnsCreateGif.classList.add('col-10');
-    PreviewVideo.classList.remove('display-window');
-    recorder.destroy();
-    recorder = null;        
+    PreviewVideo.classList.remove('display-window');                
     PreviewStream();    
 }
 
@@ -162,7 +160,10 @@ function UploadGif() {
     BtnGifUp.classList.add('display-tmp');
     BtnCancel.classList.remove('display-tmp');
     DivBtnsCreateGif.classList.remove('col-5');
-    DivBtnsCreateGif.classList.add('col-10');                   
+    DivBtnsCreateGif.classList.add('col-10');
+    
+    //Shutting down the camera
+    recorder.camera.stop();
 
     let form = new FormData();    
     form.append('file', recorder.getBlob(), 'myGif.gif');
@@ -288,8 +289,7 @@ function CaptureCam(callback) {
 }
 
 function StopRecordingCallback() {
-    img.src = URL.createObjectURL(recorder.getBlob());
-    recorder.camera.stop();    
+    img.src = URL.createObjectURL(recorder.getBlob());        
     clearInterval(Time)    
 }
 
@@ -313,44 +313,27 @@ function CaptureStream() {
         recorder.startRecording();
         timer();        
 
-        //Release camera
-        recorder.camera = stream;        
-
-        BtnStop.addEventListener('click', function() { 
-            //Second change of title            
-            PreviewGifTitle.innerHTML = "Vista Previa";
-            //View Modifing  
-            BtnGifRep.classList.remove('display-tmp');
-            BtnGifUp.classList.remove('display-tmp');
-            BtnStop.classList.add('display-tmp')
-            BtnStopIcon.classList.add('display-tmp')
-            DivProgressPlay.classList.remove('display-tmp')
-            DivBtnsCreateGif.classList.remove('col-10')
-            DivBtnsCreateGif.classList.add('col-5')
-            PreviewVideo.classList.add('display-window');
-            img.classList.remove('display-tmp')                        
-            recorder.stopRecording(StopRecordingCallback);
-            var Progress = document.getElementById("Bar");            
-            ProgressBar(Progress)             
-        })
-        BtnStopIcon.addEventListener('click', function() { 
-            //Second change of title            
-            PreviewGifTitle.innerHTML = "Vista Previa";
-            //View Modifing  
-            BtnGifRep.classList.remove('display-tmp');
-            BtnGifUp.classList.remove('display-tmp');
-            BtnStop.classList.add('display-tmp')
-            BtnStopIcon.classList.add('display-tmp')
-            DivProgressPlay.classList.remove('display-tmp')
-            DivBtnsCreateGif.classList.remove('col-10')
-            DivBtnsCreateGif.classList.add('col-5')
-            PreviewVideo.classList.add('display-window');
-            img.classList.remove('display-tmp')                        
-            recorder.stopRecording(StopRecordingCallback);
-            var Progress = document.getElementById("Bar");            
-            ProgressBar(Progress)             
-        })
+        //To release camera
+        recorder.camera = stream;
     });
+}
+
+function BtnStopRecording() {
+    //Second change of title            
+    PreviewGifTitle.innerHTML = "Vista Previa";
+    //View Modifing  
+    BtnGifRep.classList.remove('display-tmp');
+    BtnGifUp.classList.remove('display-tmp');
+    BtnStop.classList.add('display-tmp')
+    BtnStopIcon.classList.add('display-tmp')
+    DivProgressPlay.classList.remove('display-tmp')
+    DivBtnsCreateGif.classList.remove('col-10')
+    DivBtnsCreateGif.classList.add('col-5')
+    PreviewVideo.classList.add('display-window');
+    img.classList.remove('display-tmp')                                            
+    recorder.stopRecording(StopRecordingCallback);
+    var Progress = document.getElementById("Bar");            
+    ProgressBar(Progress) 
 }
 
 function ProgressBar(Progress) {    
