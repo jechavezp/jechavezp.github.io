@@ -3,7 +3,7 @@ var recorder; var BtnStop; var BtnStopIcon; var BtnStart; var BtnStartIcon;
 var BtnGifRep; var BtnGifUp; var DivProgressPlay; var DivBtnsCreateGif;
 var PreviewVideo; var img; var Time; var DivTimer; var TimerText; var PreviewVideoContent;
 var UploadIcon; var UploadBar; var BtnCancel; var newPreview; var IdGifUploaded;
-var GetGifUploaded; var i=0;
+var GetGifUploaded; var i=0; var ResultShowMyGif;
 
 //Constants
 const KeyToUp = 'rFDuK1U4JkZH6YMnkFq0JFVc1184B4H4';
@@ -146,6 +146,7 @@ function captureBtns() {
 }
 
 function UploadGif() {
+    i = 0;
     //Showing/hidden elements...
     var Progress = document.getElementById("SecondBar");
     ProgressBar(Progress) 
@@ -207,7 +208,10 @@ function CallGifUploaded(IdGif) {
     fetch(UrlGetById)
     .then(response => response.json())
     .then(result => {        
-        GetGifUploaded = result.data.images['downsized_medium']['url'];        
+        ResultShowMyGif = result.meta.status;
+        if(ResultShowMyGif == 200){
+            GetGifUploaded = result.data.images['downsized_medium']['url'];
+        }        
     })
 }
 
@@ -366,7 +370,9 @@ async function MyGuifos() {
         let item = localStorage.getItem(element);
         CallGifUploaded(item);        
         await sleep(1000);        
-        ShowMyGuifos(GetGifUploaded);
+        if(ResultShowMyGif == 200){
+            ShowMyGuifos(GetGifUploaded);
+        }        
     })
 }
 
