@@ -14,11 +14,11 @@ const TodayTrends = document.getElementById('TodayTrends');
 
 //Showing drop-down menu
 btnTheme1.addEventListener('click', function () {
-    DivThemes.classList.remove('display')       
+    DivThemes.classList.remove('display')           
 })
 
 btnTheme2.addEventListener('click', function () {
-    DivThemes.classList.remove('display')    
+    DivThemes.classList.remove('display')        
 })
 
 //Changing theme
@@ -67,7 +67,7 @@ btnDay.addEventListener('click', function () {
     TrendsBody2.forEach(element => {        
         element.classList.remove('trends-bigger-image-night');
         element.classList.add('trends-bigger-image'); 
-    });
+    });            
 })
 
 btnNight.addEventListener('click', function () {
@@ -115,7 +115,7 @@ btnNight.addEventListener('click', function () {
     TrendsBody2.forEach(element => {        
         element.classList.remove('trends-bigger-image');
         element.classList.add('trends-bigger-image-night'); 
-    });
+    });        
 })
 
 function RedirectToUpload() {    

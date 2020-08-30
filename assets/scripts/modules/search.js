@@ -1,6 +1,7 @@
 const keySearch = 'rFDuK1U4JkZH6YMnkFq0JFVc1184B4H4';
 const InputSearch = document.getElementById('search-text');
 const ButtonSearch = document.getElementById('SearchButton');
+
 /*Search: API*/
 const SearchApi = 'https://api.giphy.com/v1/gifs/search';
 const UrlPlusKeySearch = '?api_key=' + keySearch;
@@ -75,7 +76,16 @@ function SearchSection(title, img, Cssclass1, Cssclass2) {
     `;
     divsSearch.innerHTML = TemplateSearch;
     newSearch.appendChild(divsSearch);
-    MainDivSearch.classList.remove('display')    
+    MainDivSearch.classList.remove('display')
+    
+    //To change search button color
+    ButtonSearch.classList.remove('button-enable');
+    ButtonSearch.classList.add('button-disable');
+    
+    //To change search result title
+    SearchResult = document.getElementById('SearchResult');
+    //SearchResult.innerHTML = InputSearch.value + ' (resultados)';
+    SearchResult.innerHTML = title + ' (resultados)';
 }
 
 function ClearSearch() {
@@ -87,17 +97,24 @@ InputSearch.addEventListener( 'input', function() {
     let url = SearchApi + UrlPlusKeySearch + '&q=' + InputSearch.value + '&limit=3';
     let MinLength =  InputSearch.value.length;
     const divSearch = document.getElementById('GifSearchResult');
-    const MainDivSearch = document.querySelector('.main-search')
+    const MainDivSearch = document.querySelector('.main-search')   
 
     if(MinLength == 0){
         /*To hide both search title and search results (respectively)*/
         divSearch.classList.add('display')
         MainDivSearch.classList.add('display')
+        //To change search button color
+        ButtonSearch.classList.remove('button-enable');
+        ButtonSearch.classList.add('button-disable');
         /*To Clean a previous search*/ 
         ClearSearch();
     }
     
     if(MinLength >= 3) {
+        //To change search button color
+        ButtonSearch.classList.remove('button-disable');
+        ButtonSearch.classList.add('button-enable');       
+
         SearchCallApi(url);
     }    
 })
@@ -133,8 +150,7 @@ function Result3() {
 }
 
 HashTagButton1.addEventListener( 'click', function() {
-    let StringToSearch = HashTagButton1.value.substr(2);     
-    console.log(StringToSearch);   
+    let StringToSearch = HashTagButton1.value.substr(2);            
     let url = SearchApi + UrlPlusKeySearch + '&q=' + StringToSearch + '&limit=10';
     SearchByResultCallApi(url)
 })
@@ -159,9 +175,9 @@ InputSearch.addEventListener( 'keypress', function() {
     let MinLength =  InputSearch.value.length;
     const divSearch = document.getElementById('GifSearchResult');        
 
-    if(MinLength >= 3 && KeyPressed == 13) {
+    if(MinLength >= 3 && KeyPressed == 13) {        
         SearchByResultCallApi(url);
-        divSearch.classList.add('display')        
+        divSearch.classList.add('display')                        
     }    
 })
 
