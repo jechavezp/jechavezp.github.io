@@ -85,7 +85,7 @@ function SearchSection(title, img, Cssclass1, Cssclass2) {
     //To change search result title
     SearchResult = document.getElementById('SearchResult');
     //SearchResult.innerHTML = InputSearch.value + ' (resultados)';
-    SearchResult.innerHTML = title + ' (resultados)';
+    SearchResult.innerHTML = 'Resultado de la búsqueda: ' + InputSearch.value;
 }
 
 function ClearSearch() {
